@@ -11,7 +11,38 @@
 		093234ED1D94C8F000562761 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 093234EC1D94C8F000562761 /* main.m */; };
 		093234EF1D94C8F000562761 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 093234EE1D94C8F000562761 /* Assets.xcassets */; };
 		093234F21D94C8F000562761 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 093234F01D94C8F000562761 /* MainMenu.xib */; };
+		093235001D94C91500562761 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 093234FF1D94C91500562761 /* Cocoa.framework */; };
+		093235061D94C91500562761 /* SourceEditorExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 093235051D94C91500562761 /* SourceEditorExtension.m */; };
+		093235091D94C91500562761 /* JRCopyLineDown.m in Sources */ = {isa = PBXBuildFile; fileRef = 093235081D94C91500562761 /* JRCopyLineDown.m */; };
+		0932350D1D94C91500562761 /* JRXcodeExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 093234FD1D94C91500562761 /* JRXcodeExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		093235161D94D17900562761 /* JRDeleteLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 093235151D94D17900562761 /* JRDeleteLine.m */; };
+		0932351A1D94D31300562761 /* JRGenerateLazyCode.m in Sources */ = {isa = PBXBuildFile; fileRef = 093235191D94D31300562761 /* JRGenerateLazyCode.m */; };
+		0965AB4E1DADCDF40060CEA7 /* JRBaseCommand.m in Sources */ = {isa = PBXBuildFile; fileRef = 0965AB4D1DADCDF40060CEA7 /* JRBaseCommand.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0932350B1D94C91500562761 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 093234DD1D94C8EF00562761 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 093234FC1D94C91500562761;
+			remoteInfo = JRXcodeExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		093235111D94C91500562761 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0932350D1D94C91500562761 /* JRXcodeExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		093234E51D94C8EF00562761 /* JRSourceExtension.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRSourceExtension.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -21,6 +52,20 @@
 		093234EE1D94C8F000562761 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		093234F11D94C8F000562761 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		093234F31D94C8F000562761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093234FD1D94C91500562761 /* JRXcodeExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JRXcodeExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		093234FF1D94C91500562761 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		093235031D94C91500562761 /* JRXcodeExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JRXcodeExtension.entitlements; sourceTree = "<group>"; };
+		093235041D94C91500562761 /* SourceEditorExtension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SourceEditorExtension.h; sourceTree = "<group>"; };
+		093235051D94C91500562761 /* SourceEditorExtension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SourceEditorExtension.m; sourceTree = "<group>"; };
+		093235071D94C91500562761 /* JRCopyLineDown.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JRCopyLineDown.h; sourceTree = "<group>"; };
+		093235081D94C91500562761 /* JRCopyLineDown.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JRCopyLineDown.m; sourceTree = "<group>"; };
+		0932350A1D94C91500562761 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		093235141D94D17900562761 /* JRDeleteLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRDeleteLine.h; sourceTree = "<group>"; };
+		093235151D94D17900562761 /* JRDeleteLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRDeleteLine.m; sourceTree = "<group>"; };
+		093235181D94D31300562761 /* JRGenerateLazyCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRGenerateLazyCode.h; sourceTree = "<group>"; };
+		093235191D94D31300562761 /* JRGenerateLazyCode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRGenerateLazyCode.m; sourceTree = "<group>"; };
+		0965AB4C1DADCDF40060CEA7 /* JRBaseCommand.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRBaseCommand.h; sourceTree = "<group>"; };
+		0965AB4D1DADCDF40060CEA7 /* JRBaseCommand.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRBaseCommand.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +76,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		093234FA1D94C91500562761 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093235001D94C91500562761 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -38,6 +91,8 @@
 			isa = PBXGroup;
 			children = (
 				093234E71D94C8EF00562761 /* JRSourceExtension */,
+				093235011D94C91500562761 /* JRXcodeExtension */,
+				093234FE1D94C91500562761 /* Frameworks */,
 				093234E61D94C8EF00562761 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				093234E51D94C8EF00562761 /* JRSourceExtension.app */,
+				093234FD1D94C91500562761 /* JRXcodeExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -71,6 +127,65 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		093234FE1D94C91500562761 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				093234FF1D94C91500562761 /* Cocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		093235011D94C91500562761 /* JRXcodeExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0965AB4C1DADCDF40060CEA7 /* JRBaseCommand.h */,
+				0965AB4D1DADCDF40060CEA7 /* JRBaseCommand.m */,
+				093235171D94D2E300562761 /* GenerateLazyCode */,
+				093235131D94D13A00562761 /* DeleteLine */,
+				093235121D94D12900562761 /* CopyLineDown */,
+				093235041D94C91500562761 /* SourceEditorExtension.h */,
+				093235051D94C91500562761 /* SourceEditorExtension.m */,
+				0932350A1D94C91500562761 /* Info.plist */,
+				093235021D94C91500562761 /* Supporting Files */,
+			);
+			path = JRXcodeExtension;
+			sourceTree = "<group>";
+		};
+		093235021D94C91500562761 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				093235031D94C91500562761 /* JRXcodeExtension.entitlements */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		093235121D94D12900562761 /* CopyLineDown */ = {
+			isa = PBXGroup;
+			children = (
+				093235071D94C91500562761 /* JRCopyLineDown.h */,
+				093235081D94C91500562761 /* JRCopyLineDown.m */,
+			);
+			name = CopyLineDown;
+			sourceTree = "<group>";
+		};
+		093235131D94D13A00562761 /* DeleteLine */ = {
+			isa = PBXGroup;
+			children = (
+				093235141D94D17900562761 /* JRDeleteLine.h */,
+				093235151D94D17900562761 /* JRDeleteLine.m */,
+			);
+			name = DeleteLine;
+			sourceTree = "<group>";
+		};
+		093235171D94D2E300562761 /* GenerateLazyCode */ = {
+			isa = PBXGroup;
+			children = (
+				093235181D94D31300562761 /* JRGenerateLazyCode.h */,
+				093235191D94D31300562761 /* JRGenerateLazyCode.m */,
+			);
+			name = GenerateLazyCode;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -81,15 +196,34 @@
 				093234E11D94C8EF00562761 /* Sources */,
 				093234E21D94C8EF00562761 /* Frameworks */,
 				093234E31D94C8EF00562761 /* Resources */,
+				093235111D94C91500562761 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0932350C1D94C91500562761 /* PBXTargetDependency */,
 			);
 			name = JRSourceExtension;
 			productName = JRSourceExtension;
 			productReference = 093234E51D94C8EF00562761 /* JRSourceExtension.app */;
 			productType = "com.apple.product-type.application";
+		};
+		093234FC1D94C91500562761 /* JRXcodeExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0932350E1D94C91500562761 /* Build configuration list for PBXNativeTarget "JRXcodeExtension" */;
+			buildPhases = (
+				093234F91D94C91500562761 /* Sources */,
+				093234FA1D94C91500562761 /* Frameworks */,
+				093234FB1D94C91500562761 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JRXcodeExtension;
+			productName = JRXcodeExtension;
+			productReference = 093234FD1D94C91500562761 /* JRXcodeExtension.appex */;
+			productType = "com.apple.product-type.xcode-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -101,6 +235,11 @@
 				ORGANIZATIONNAME = J;
 				TargetAttributes = {
 					093234E41D94C8EF00562761 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 462J8VB29Y;
+						ProvisioningStyle = Automatic;
+					};
+					093234FC1D94C91500562761 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = 462J8VB29Y;
 						ProvisioningStyle = Automatic;
@@ -121,6 +260,7 @@
 			projectRoot = "";
 			targets = (
 				093234E41D94C8EF00562761 /* JRSourceExtension */,
+				093234FC1D94C91500562761 /* JRXcodeExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -132,6 +272,13 @@
 			files = (
 				093234EF1D94C8F000562761 /* Assets.xcassets in Resources */,
 				093234F21D94C8F000562761 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		093234FB1D94C91500562761 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +294,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		093234F91D94C91500562761 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				093235061D94C91500562761 /* SourceEditorExtension.m in Sources */,
+				0965AB4E1DADCDF40060CEA7 /* JRBaseCommand.m in Sources */,
+				0932351A1D94D31300562761 /* JRGenerateLazyCode.m in Sources */,
+				093235161D94D17900562761 /* JRDeleteLine.m in Sources */,
+				093235091D94C91500562761 /* JRCopyLineDown.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0932350C1D94C91500562761 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 093234FC1D94C91500562761 /* JRXcodeExtension */;
+			targetProxy = 0932350B1D94C91500562761 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		093234F01D94C8F000562761 /* MainMenu.xib */ = {
@@ -252,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 462J8VB29Y;
 				INFOPLIST_FILE = JRSourceExtension/Info.plist;
@@ -265,12 +433,46 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 462J8VB29Y;
 				INFOPLIST_FILE = JRSourceExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.JRSourceExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0932350F1D94C91500562761 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JRXcodeExtension/JRXcodeExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 462J8VB29Y;
+				INFOPLIST_FILE = JRXcodeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JRSourceExtension.JRXcodeExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		093235101D94C91500562761 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = JRXcodeExtension/JRXcodeExtension.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 462J8VB29Y;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = JRXcodeExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @executable_path/../../../../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.JRSourceExtension.JRXcodeExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -293,6 +495,16 @@
 				093234F81D94C8F000562761 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0932350E1D94C91500562761 /* Build configuration list for PBXNativeTarget "JRXcodeExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0932350F1D94C91500562761 /* Debug */,
+				093235101D94C91500562761 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
