@@ -84,53 +84,29 @@
     // 检查带 * 的
     // @property (nonatomic, strong) NSString *abc;
     reg =
-    [NSRegularExpression regularExpressionWithPattern:@"[0-9a-zA-Z_]+\\ *\\*\\ *[0-9a-zA-Z_]+"
+    [NSRegularExpression regularExpressionWithPattern:@"\\w+(<.+>)? *\\* *\\w+ *;"
                                               options:NSRegularExpressionCaseInsensitive
                                                 error:&error];
     array =
     [reg matchesInString:line options:NSMatchingReportProgress range:NSMakeRange(0, line.length)];
     if (array.count) {
         NSString *string = [line substringWithRange:array.firstObject.range];// NSString *abc
-        obj.type = [[string componentsSeparatedByString:@"*"].firstObject stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        obj.name = [[string componentsSeparatedByString:@"*"].lastObject stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        reg = [NSRegularExpression regularExpressionWithPattern:@"\\w+(<.+>)? *\\*" options:NSRegularExpressionCaseInsensitive error:&error];
+        array = [reg matchesInString:string options:NSMatchingReportProgress range:NSMakeRange(0, string.length)];
+        obj.type = [string substringWithRange:array.firstObject.range];
+        obj.type = [[obj.type substringToIndex:obj.type.length - 1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        reg = [NSRegularExpression regularExpressionWithPattern:@"\\* *\\w+ *;" options:NSRegularExpressionCaseInsensitive error:&error];
+        array = [reg matchesInString:string options:NSMatchingReportProgress range:NSMakeRange(0, string.length)];
+        obj.name = [string substringWithRange:array.firstObject.range];
+        obj.name = [[[obj.name substringToIndex:obj.name.length - 1] substringFromIndex:1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
         obj.needStar = YES;
         return obj;
     }
     
-    // 检查不带 * 的
-    // @property (nonatomic, assign) int abc;
-    reg =
-    [NSRegularExpression regularExpressionWithPattern:@"[0-9a-zA-Z_]+\\ +[0-9a-zA-Z_]+\\ *;"
-                                              options:NSRegularExpressionCaseInsensitive
-                                                error:&error];
-    array =
-    [reg matchesInString:line options:NSMatchingReportProgress range:NSMakeRange(0, line.length)];
-    if (array.count) {
-        NSString *string = [line substringWithRange:array.firstObject.range];// int abc
-        string = [[string substringToIndex:string.length - 1] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        obj.type = [[string componentsSeparatedByString:@" "].firstObject stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        obj.name = [[string componentsSeparatedByString:@" "].lastObject stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-        return obj;
-    }
+    return nil;// 后面都不要了，一般都是对象才会需要 懒加载
     
-    // 检查 block 的
-    // @property (nonatomic, assign) void (^abc)();
-    reg =
-    [NSRegularExpression regularExpressionWithPattern:@"[0-9a-zA-Z_]+\\ *\\*?\\(\\^[0-9a-zA-Z_]+\\)\\(.*\\)"
-                                              options:NSRegularExpressionCaseInsensitive
-                                                error:&error];
-    array =
-    [reg matchesInString:line options:NSMatchingReportProgress range:NSMakeRange(0, line.length)];
-    if (array.count) {
-        NSString *string = [line substringWithRange:array.firstObject.range];// int abc
-        
-        obj.name = [[string substringToIndex:[string rangeOfString:@")"].location] substringFromIndex:[string rangeOfString:@"^"].location + 1];
-        obj.type = [string stringByReplacingOccurrencesOfString:obj.name withString:@""];
-        
-        return obj;
-    }
-    
-    return nil;
 }
 
 @end
